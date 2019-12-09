@@ -14,6 +14,6 @@ images = ft.get_source_images(source_images_folder)
 for input_image in images:
     ft.extract_face_descriptors(input_image)
     for i, d in enumerate(zip(ft.processed_images, ft.face_descriptors)):
-        print(d[1])
+        #print(type(d))
         print("####################################################")
 

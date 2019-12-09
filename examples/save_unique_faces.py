@@ -16,7 +16,6 @@ for input_image in images:
     ft.extract_face_descriptors(input_image)
     for i, d in enumerate(zip(ft.processed_images, ft.face_descriptors)):
         feature_vector_as_list = list(d[1])
-        print(d[1])
-        ret, new_feature_uuid = ft.add_face_descriptors_to_db(feature_vector_as_list, img_uuid)
-        print("####################################################")
+        ret, feature_uuid = ft.add_face_descriptors_to_db(feature_vector_as_list, img_uuid)
+        print("{0}::{1}".format(input_image.split("/")[-1], feature_uuid))
 
