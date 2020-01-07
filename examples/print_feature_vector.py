@@ -12,8 +12,9 @@ source_images_folder = sys.argv[3] # /home/devel/Documents/test_images/sources/d
 ft = FaceTool(shape_model, face_model, "FACESLURP", ["127.0.0.1"])
 images = ft.get_source_images(source_images_folder)
 for input_image in images:
+    print("[INFO] Processing {}".format(input_image))
     ft.extract_face_descriptors(input_image)
     for i, d in enumerate(zip(ft.processed_images, ft.face_descriptors)):
-        #print(type(d))
+        print(list(d[1]))
         print("####################################################")
 
