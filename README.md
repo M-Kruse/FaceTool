@@ -8,8 +8,6 @@ FaceTool is a python class built on the dlib python bindings. It mainly exists t
 
 Required python3 packages:
 
- * selenium
- * numpy
  * cassandra_driver
  * dlib
 
